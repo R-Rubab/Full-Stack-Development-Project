@@ -99,7 +99,7 @@ Employee-Management-System/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/Employee-Management-System.git
+git clone https://github.com/R-Rubab/Full-Stack-Development-Project
 ```
 
 ---
@@ -144,38 +144,52 @@ Open the **client/index.html** file using **Live Server** in VS Code.
 
 ---
 
-# 📷 Project Screenshots
 
-### Dashboard
+# 📸 Project Screenshots
 
-(Add Screenshot Here)
+## 🌙 Dashboard (Dark Mode)
 
----
+Shows the Employee Management Dashboard with statistics, department-wise chart, employee management form, employee directory, search, filtering, and export functionality.
 
-### Employee List
-
-(Add Screenshot Here)
+![Dashboard Dark](week3_employee_api_database/client/screenshots/s1.png)
 
 ---
 
-### Add Employee
+## ☀️ Dashboard (Light Mode)
 
-(Add Screenshot Here)
+Light theme version of the Employee Management System demonstrating responsive design and user-friendly interface.
+
+![Dashboard Light](week3_employee_api_database/client/screenshots/s2.png)
+
+---
+
+## 🔍 Employee Search
+
+Demonstrates the real-time search functionality that filters employees by name while maintaining dashboard statistics and department charts.
+
+![Employee Search](week3_employee_api_database/client/screenshots/s3.png)
 
 ---
 
-### MongoDB Database
+# 📸 Project Preview
 
-(Add Screenshot Here)
+| Dark Mode | Light Mode |
+|------------|------------|
+| ![](screenshots/s1.png) | ![](screenshots/s2.png) |
+
+### 🔍 Search Functionality
+
+![](screenshots/s3.png)
 
 ---
+
 
 # 🧪 Sample JSON
 
 ```json
 {
-  "name": "Rubab",
-  "email": "rubab@example.com",
+  "name": "developer",
+  "email": "dev@example.com",
   "department": "Flutter",
   "salary": 90000
 }
@@ -220,10 +234,7 @@ Through this project, I learned:
 Full Stack & Flutter Developer
 
 GitHub:
-https://github.com/YOUR_GITHUB_USERNAME
-
-LinkedIn:
-https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/
+https://github.com/R-Rubab/Full-Stack-Development-Project
 
 ---
 

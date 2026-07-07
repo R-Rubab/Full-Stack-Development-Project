@@ -61,7 +61,7 @@ Responsive-Landing-Page/
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/responsive-landing-page.git
+git clone https://github.com/R-Rubab/Full-Stack-Development-Project
 ```
 
 ---
@@ -101,16 +101,9 @@ During this project, I learned:
 
 ---
 
-# 📸 Screenshots
+## 🎥 Project Demo
 
-Add screenshots of:
-
-* Home Page
-* Hero Section
-* Services Section
-* Mobile View
-* Tablet View
-
+https://github.com/user-attachments/assets/your-video-link
 ---
 
 # 🚀 Future Improvements
@@ -129,9 +122,7 @@ Add screenshots of:
 
 Computer Science Graduate | Flutter & Full Stack Developer
 
-GitHub: https://github.com/YOUR_GITHUB_USERNAME
-
-LinkedIn: https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/
+GitHub: https://github.com/R-Rubab/Full-Stack-Development-Project/tree/main/Week1-Landing-Page
 
 ---
 
