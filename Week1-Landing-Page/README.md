@@ -101,9 +101,40 @@ During this project, I learned:
 
 ---
 
+# 📸 Project Screenshots
+
+
+![Dashboard Dark](https://github.com/R-Rubab/Full-Stack-Development-Project/tree/main/Week1-Landing-Page/screenshots/s1.png)
+
+---
+
+
+![Dashboard Light](https://github.com/R-Rubab/Full-Stack-Development-Project/tree/main/Week1-Landing-Page/screenshots/s2.png)
+
+---
+
+
+![Employee Search](https://github.com/R-Rubab/Full-Stack-Development-Project/tree/main/Week1-Landing-Page/screenshots/s3.png)
+
+
+---
+
+![Employee Search](https://github.com/R-Rubab/Full-Stack-Development-Project/tree/main/Week1-Landing-Page/screenshots/s4.png)
+
+
+---
+
+![Employee Search](https://github.com/R-Rubab/Full-Stack-Development-Project/tree/main/Week1-Landing-Page/screenshots/s5.png)
+
+
+
+
+---
+
 ## 🎥 Project Demo
 
-https://github.com/user-attachments/assets/your-video-link
+https://github.com/R-Rubab/Full-Stack-Development-Project/blob/main/week1_landing_page/screenshots/recod.mov
+
 ---
 
 # 🚀 Future Improvements

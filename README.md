@@ -132,7 +132,7 @@ Employee-Management-System
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/Employee-Management-System.git
+git clone https://github.com/R-Rubab/Full-Stack-Development-Project/blob/main/week3_employee_api_database
 ```
 
 ---
@@ -236,14 +236,43 @@ index.html
 
 # 📸 Project Screenshots
 
-Add screenshots before submitting:
+## 🌙 Dashboard (Dark Mode)
 
-* Home Page
-* Employee Dashboard
-* Add Employee Form
-* Employee Table
-* MongoDB Compass
-* Thunder Client API Testing
+Shows the Employee Management Dashboard with statistics, department-wise chart, employee management form, employee directory, search, filtering, and export functionality.
+
+![Dashboard Dark](https://github.com/R-Rubab/Full-Stack-Development-Project/blob/main/week3_employee_api_database/client/screenshots/s1.png)
+
+---
+
+## ☀️ Dashboard (Light Mode)
+
+Light theme version of the Employee Management System demonstrating responsive design and user-friendly interface.
+
+![Dashboard Light](https://github.com/R-Rubab/Full-Stack-Development-Project/blob/main/week3_employee_api_database/client/screenshots/s2.png)
+
+---
+
+## 🔍 Employee Search
+
+Demonstrates the real-time search functionality that filters employees by name while maintaining dashboard statistics and department charts.
+
+![Employee Search](https://github.com/R-Rubab/Full-Stack-Development-Project/blob/main/week3_employee_api_database/client/screenshots/s3.png)
+
+---
+
+# 📸 Project Preview
+
+| Dark Mode | Light Mode |
+|------------|------------|
+| ![](https://github.com/R-Rubab/Full-Stack-Development-Project/blob/main/week3_employee_api_database/client/screenshots/s1.png) | ![](https://github.com/R-Rubab/Full-Stack-Development-Project/blob/main/week3_employee_api_database/client/screenshots/s2.png) |
+
+### 🔍 Search Functionality
+
+![](https://github.com/R-Rubab/Full-Stack-Development-Project/blob/main/week3_employee_api_database/client/screenshots/s3.png)
+
+---
+
+
 
 ---
 
@@ -251,7 +280,7 @@ Add screenshots before submitting:
 
 * JWT Authentication
 * User Login & Registration
-* Role-Based Authorisation
+* Role-Based Authorization
 * Pagination
 * Advanced Search & Filters
 * Export to PDF
@@ -266,9 +295,8 @@ Add screenshots before submitting:
 
 Computer Science Graduate | Flutter & Full Stack Developer
 
-GitHub: https://github.com/YOUR_GITHUB_USERNAME
+GitHub: https://github.com/R-Rubab/Full-Stack-Development-Project
 
-LinkedIn: https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/
 
 ---
 
@@ -278,4 +306,3 @@ This project was developed for educational purposes as part of the **DecodeLabs 
 
 ---
 
-⭐ If you like this project, consider giving it a star on GitHub.

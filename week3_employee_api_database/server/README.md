@@ -151,7 +151,7 @@ Open the **client/index.html** file using **Live Server** in VS Code.
 
 Shows the Employee Management Dashboard with statistics, department-wise chart, employee management form, employee directory, search, filtering, and export functionality.
 
-![Dashboard Dark](week3_employee_api_database/client/screenshots/s1.png)
+![Dashboard Dark](https://github.com/R-Rubab/Full-Stack-Development-Project/blob/main/week3_employee_api_database/client/screenshots/s1.png)
 
 ---
 
@@ -159,7 +159,7 @@ Shows the Employee Management Dashboard with statistics, department-wise chart, 
 
 Light theme version of the Employee Management System demonstrating responsive design and user-friendly interface.
 
-![Dashboard Light](week3_employee_api_database/client/screenshots/s2.png)
+![Dashboard Light](https://github.com/R-Rubab/Full-Stack-Development-Project/blob/main/week3_employee_api_database/client/screenshots/s2.png)
 
 ---
 
@@ -167,7 +167,7 @@ Light theme version of the Employee Management System demonstrating responsive d
 
 Demonstrates the real-time search functionality that filters employees by name while maintaining dashboard statistics and department charts.
 
-![Employee Search](week3_employee_api_database/client/screenshots/s3.png)
+![Employee Search](https://github.com/R-Rubab/Full-Stack-Development-Project/blob/main/week3_employee_api_database/client/screenshots/s3.png)
 
 ---
 
@@ -175,11 +175,11 @@ Demonstrates the real-time search functionality that filters employees by name w
 
 | Dark Mode | Light Mode |
 |------------|------------|
-| ![](screenshots/s1.png) | ![](screenshots/s2.png) |
+| ![](https://github.com/R-Rubab/Full-Stack-Development-Project/blob/main/week3_employee_api_database/client/screenshots/s1.png) | ![](https://github.com/R-Rubab/Full-Stack-Development-Project/blob/main/week3_employee_api_database/client/screenshots/s2.png) |
 
 ### 🔍 Search Functionality
 
-![](screenshots/s3.png)
+![](https://github.com/R-Rubab/Full-Stack-Development-Project/blob/main/week3_employee_api_database/client/screenshots/s3.png)
 
 ---
 
