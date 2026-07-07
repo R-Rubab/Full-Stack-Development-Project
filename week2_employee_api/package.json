@@ -1,0 +1,23 @@
+{
+  "name": "week2_employee_api",
+  "version": "1.0.0",
+  "description": "Employee Management REST API",
+  "main": "app.js",
+  "scripts": {
+    "start": "node config/server.js",
+    "dev": "nodemon config/server.js"
+  },
+  "keywords": [],
+  "author": "Developer",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
+
+
+

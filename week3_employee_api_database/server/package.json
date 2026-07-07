@@ -1,0 +1,23 @@
+{
+  "name": "week3_employee_api_database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/config/server.js",
+  "scripts": {
+    "start": "node server/config/server.js",
+    "dev": "nodemon server/config/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

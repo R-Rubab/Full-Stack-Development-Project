@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* ==========================================================================
+   1. Root Variables (For Seamless Light/Dark Theme Switching)
+   ========================================================================== */
+:root {
+  --bg-primary: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  --bg-content: #f8fafc;
+  --sidebar-bg: #0f172a;
+  --text-main: #1e2b40;
+  --text-muted: #64748b;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(255, 255, 255, 0.6);
+  --input-bg: rgba(255, 255, 255, 0.5);
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* Dark Mode Variables Override */
+body.dark {
+  --bg-primary: #0f172a;
+  --bg-content: #0b0f19;
+  --sidebar-bg: #070a12;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --card-bg: rgba(30, 41, 59, 0.7);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --input-bg: rgba(15, 23, 42, 0.4);
+  --border-color: #334155;
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   2. Reset & Global Styles
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-main);
+  min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================================================
+   3. App Layout Structure
+   ========================================================================== */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 260px;
+  background: var(--sidebar-bg);
+  color: #ffffff;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.sidebar-brand h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #3b82f6;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #94a3b8;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.sidebar li i {
+  font-size: 1.1rem;
+}
+
+.sidebar li:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.sidebar li.active {
+  background: #3b82f6;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+}
+
+/* Main Content Area */
+.content {
+  flex: 1;
+  padding: 2rem;
+  background: var(--bg-content);
+  overflow-y: auto;
+  transition: background 0.3s ease;
+}
+
+/* ==========================================================================
+   4. Topbar Header Controls
+   ========================================================================== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.topbar h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-muted);
+}
+
+.search-wrapper input {
+  width: 320px;
+  padding: 0.65rem 1rem 0.65rem 2.5rem;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-main);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-wrapper input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* ==========================================================================
+   5. Analytics Stats Row
+   ========================================================================== */
+.stats-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+.dept-icon { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+.salary-icon { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+
+.stat-info h3 {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-info h2 {
+  font-size: 1.5rem;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   6. Dashboard Content Layout Grid
+   ========================================================================== */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2rem;
+}
+
+.right-column-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Glass Common Card Styles */
+.card.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-header h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-header p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* ==========================================================================
+   7. Form Controls
+   ========================================================================== */
+#employeeForm {
+  margin-top: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+  background: var(--input-bg);
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* ==========================================================================
+   8. Buttons & Actions Headers
+   ========================================================================== */
+button, .btn-icon {
+  padding: 0.65rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: #3b82f6;
+  color: white;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.btn-primary:hover { background-color: #2563eb; }
+
+.btn-secondary {
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+.btn-secondary:hover { background: var(--border-color); }
+
+.btn-icon {
+  padding: 0.65rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+/* Header Filtering UI Controls */
+.table-actions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.table-controls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.select-dropdown {
+  padding: 0.65rem 1rem;
+  background: var(--card-bg);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   9. Premium Data Table Styling
+   ========================================================================== */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+th {
+  background-color: var(--border-color);
+  color: var(--text-muted);
+  font-weight: 600;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+tr:last-child td { border-bottom: none; }
+tr:hover td { background-color: var(--border-color); }
+
+/* Table Action Buttons */
+.edit { background-color: #f1f5f9; color: #0f172a; padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+.edit:hover { background-color: #e2e8f0; }
+.delete { background-color: #fee2e2; color: #ef4444; padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+.delete:hover { background-color: #fca5a5; }
+
+.table-footer {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-export { background-color: #10b981; color: white; }
+.btn-export:hover { background-color: #059669; }
+
+/* ==========================================================================
+   10. Chart & Loader Utilities
+   ========================================================================== */
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-height: 260px;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+#loader {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  display: none;
+  justify-content: center; align-items: center;
+  z-index: 9999;
+}
+#loader::after {
+  content: ""; width: 40px; height: 40px;
+  border: 4px solid #cbd5e1; border-top-color: #3b82f6;
+  border-radius: 50%; animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ==========================================================================
+   11. Responsive Media Queries
+   ========================================================================== */
+@media (max-width: 1100px) {
+  .dashboard-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .layout { flex-direction: column; }
+  .sidebar { width: 100%; }
+  .topbar { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .search-wrapper input { width: 100%; }
+}

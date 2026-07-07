@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management System</title>
+
+    <!-- Premium Font (Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="layout">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <h2><i class="fa-solid fa-chart-pie"></i> EMS</h2>
+        </div>
+        <ul>
+          <li class="active"><i class="fa-solid fa-house"></i> Dashboard</li>
+          <li><i class="fa-solid fa-users"></i> Employees</li>
+          <li><i class="fa-solid fa-building"></i> Departments</li>
+          <li><i class="fa-solid fa-file-invoice"></i> Reports</li>
+          <li><i class="fa-solid fa-gear"></i> Settings</li>
+        </ul>
+      </aside>
+
+      <!-- Main App Content Area -->
+      <main class="content">
+        <!-- Top Navigation Bar -->
+        <header class="topbar">
+          <h1>Employee Management System</h1>
+          <div class="topbar-actions">
+            <div class="search-wrapper">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <input
+                type="text"
+                id="search"
+                placeholder="Search employees by name..."
+              />
+            </div>
+            <button id="themeToggle" class="btn-icon">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </div>
+        </header>
+
+        <!-- Stats Counter Cards Grid -->
+        <section class="stats-grid-container">
+          <div class="stat-card glass-card">
+            <div class="stat-icon emp-icon">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Total Employees</h3>
+              <h2 id="totalEmployees">0</h2>
+            </div>
+          </div>
+
+          <div class="stat-card glass-card">
+            <div class="stat-icon dept-icon">
+              <i class="fa-solid fa-building"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Total Departments</h3>
+              <h2 id="totalDepartments">0</h2>
+            </div>
+          </div>
+
+          <div class="stat-card glass-card">
+            <div class="stat-icon salary-icon">
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+            <div class="stat-info">
+              <h3>Average Salary</h3>
+              <h2 id="averageSalary">$0</h2>
+            </div>
+          </div>
+        </section>
+
+        <div class="dashboard-grid">
+          <!-- Left Column: Add/Edit Form -->
+          <section class="card glass-card form-section">
+            <div class="card-header">
+              <h2><i class="fa-solid fa-user-plus"></i> Manage Employee</h2>
+              <p>Fill in the details below to add or update an employee.</p>
+            </div>
+
+            <form id="employeeForm">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="e.g. John Doe"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="e.g. john@company.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="department">Department</label>
+                <input
+                  type="text"
+                  id="department"
+                  placeholder="e.g. Engineering, HR"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="salary">Monthly Salary ($)</label>
+                <input
+                  type="number"
+                  id="salary"
+                  placeholder="e.g. 5000"
+                  required
+                />
+              </div>
+
+              <button type="submit" id="submitBtn" class="btn-primary">
+                Add Employee
+              </button>
+            </form>
+          </section>
+
+          <!-- Right Column: Chart & Employee Table List -->
+          <div class="right-column-container">
+            <!-- Chart Section Card -->
+            <section class="card glass-card chart-section">
+              <div class="card-header">
+                <h2>
+                  <i class="fa-solid fa-chart-bar"></i> Department Wise
+                  Headcount
+                </h2>
+              </div>
+              <div class="chart-container">
+                <canvas id="departmentChart"></canvas>
+              </div>
+            </section>
+
+            <!-- Table Section Card -->
+            <section class="card glass-card table-section">
+              <div class="card-header table-actions-header">
+                <h2><i class="fa-solid fa-list"></i> Employee Directory</h2>
+                <div class="table-controls">
+                  <button id="sortSalary" class="btn-secondary">
+                    <i class="fa-solid fa-sort"></i> Sort Salary
+                  </button>
+                  <select id="departmentFilter" class="select-dropdown">
+                    <option value="">All Departments</option>
+                    <option value="IT">IT</option>
+                    <option value="Flutter">Flutter</option>
+                    <option value="HR">HR</option>
+                    <option value="Finance">Finance</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Department</th>
+                      <th>Salary</th>
+                      <th>Created At</th>
+                      <th style="text-align: center">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="employeeTable">
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="table-footer">
+                <button onclick="exportCSV()" class="btn-export">
+                  <i class="fa-solid fa-file-csv"></i> Export CSV
+                </button>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- Loader UI Element -->
+        <div id="loader"></div>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/export.js"></script>
+  </body>
+</html>
